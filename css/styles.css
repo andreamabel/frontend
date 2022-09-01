@@ -49,10 +49,6 @@ h1 {
 
 /* NAV */
 
-.navbar__menu {
-  display: none;
-}
-
 .navbar {
   position: fixed;
   outline: none;
@@ -73,7 +69,7 @@ h1 {
   color: white;
 }
 
-.nav__div2 ul {
+.navbar__ul {
   padding: 0;
   margin: 0;
   display: flex;
@@ -88,6 +84,38 @@ h1 {
   font-weight: 600;
 }
 
+.navbar__menu {
+  display: none;
+  position: relative;
+  font-size: 27px;
+  z-index: 2000;
+}
+
+.navbar__menu:hover {
+  cursor: pointer;
+}
+
+/* clase responsive navbar */
+
+.ulResponsive {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 60px 0;
+  z-index: 1000;
+  display: flex;
+  background-color: aqua;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
 /* HOME */
 .home {
   background-color: rgba(255, 192, 203, 0.541);
@@ -99,6 +127,7 @@ h1 {
   left: 0;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
   box-shadow: inset 0 -15px 25px 5px pink, 
               0 15px 25px 5px pink;
@@ -142,7 +171,15 @@ h1 {
   align-items: center;
 }
 
+.divImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .divImg img {
+  justify-content: center;
+  align-items: center;
   display: flex;
   width: 100%;
   border-radius: 15px;
@@ -185,7 +222,7 @@ textarea {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 192, 203, 0.3);
   padding: 20px;
-  max-width: 100%;
+  width: 100%;
   box-shadow: 15px 0px 25px 5px pink;
 }
 

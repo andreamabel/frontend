@@ -1,5 +1,7 @@
 const navbar = document.querySelector(".navbar");
 let form = document.getElementById('formSubmit')
+let bar = document.querySelector('.fa-bars')
+let navUl = document.querySelector('.navbar__ul')
 
 window.addEventListener("scroll", function () {
   window.scrollY > 100 && (navbar.style.background = `rgba(255, 192, 203, 0.575)`);
@@ -10,4 +12,12 @@ window.addEventListener("scroll", function () {
 
 form.addEventListener('submit', function(e){
   e.preventDefault()
+})
+
+window.addEventListener('click', (e)=>{
+  if(e.target == bar){
+    navUl.classList.toggle('visible')
+  }else{
+    navUl.classList.remove('visible')
+  }
 })
