@@ -1,54 +1,40 @@
 @media (max-width: 767px) {
-  .navbar {
-    display: flex;
-    /* flex-direction: row; */
-    background-color: red;
+
+  .nav__div1 h1 {
+    font-size: 30px;
   }
   .navbar__menu {
     display: flex;
-    /* position: relative; */
-    /* z-index: 2000; */
-    /* top: 35px;
-    right: 35px; */
-    /* font-size: 25px; */
   }
 
-  .nav__div2 {
-    display: none;
-  }
-
-  /* .navbar__menu:hover {
-    background-color: green;
-  }
-
-  .nav__div2{
+  .navbar__ul{
+    background: rgba(255, 192, 203, 0.875);
     position: absolute;
     top: 0;
-    bottom: 0;
     right: 0;
     left: 0;
+    bottom: 0;
     width: 100vw;
     height: 100vh;
-    background-color: aqua;
     padding: 60px 0;
-    margin: 0;
-    z-index: 1000;
-  }
-
-  .nav__div2 ul {
-    display: flex;
-    background-color: gold;
-    height: 100%;
-    width: 100%;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 10px;
+    z-index: 1000;
+    transition: all 0.5s;
+    transform: translateX(100%);
+  }
+
+  .visible {
+    display: flex;
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.5s;
   }
 
   .nav__div2 ul li{
     width: 100%;
     height: 100%;
-    background-color: red;
   }
 
   .nav__div2 ul li a{
@@ -58,5 +44,22 @@
     width: 100%;
     height: 100%;
     font-size: 20px;
-  } */
+  }
+
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+  .divImg img {
+    width: 70%;
+  }
+
+  .divDesc {
+    grid-column: 1 / 2;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  .containerDiv{
+    width: 95%;
+  }
 }
